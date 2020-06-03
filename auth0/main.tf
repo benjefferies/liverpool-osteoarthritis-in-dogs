@@ -1,10 +1,10 @@
 provider "auth0" {
   domain = "dogarthritistest"
-  debug = true
+  debug  = true
 }
 
 resource "auth0_tenant" "tenant" {
-  friendly_name = "Liverpool Osteoarthritis In Dogs"
+  friendly_name    = "Liverpool Osteoarthritis In Dogs"
   session_lifetime = 46000
   sandbox_version  = "8"
 }
@@ -20,16 +20,16 @@ resource "auth0_resource_server" "resource_server" {
 }
 
 resource "auth0_client" "webapp" {
-  name = "Webapp"
-  app_type = "spa"
-  is_first_party = true
+  name                       = "Webapp"
+  app_type                   = "spa"
+  is_first_party             = true
   token_endpoint_auth_method = "client_secret_post"
-  oidc_conformant = false
-  callbacks = [ "https://localhost:3000/callback", "https://dogarthritistest.co.uk/callback" ]
-  allowed_origins = [ "https://localhost:3000", "https://dogarthritistest.co.uk" ]
-  grant_types = [ "authorization_code", "http://auth0.com/oauth/grant-type/password-realm", "implicit", "password", "refresh_token" ]
-  allowed_logout_urls = [ "https://localhost:3000", "https://dogarthritistest.co.uk" ]
-  web_origins = [ "https://localhost:3000", "https://dogarthritistest.co.uk" ]
+  oidc_conformant            = false
+  callbacks                  = ["https://localhost:3000/callback", "https://dogarthritistest.co.uk/callback"]
+  allowed_origins            = ["https://localhost:3000", "https://dogarthritistest.co.uk"]
+  grant_types                = ["authorization_code", "http://auth0.com/oauth/grant-type/password-realm", "implicit", "password", "refresh_token"]
+  allowed_logout_urls        = ["https://localhost:3000", "https://dogarthritistest.co.uk"]
+  web_origins                = ["https://localhost:3000", "https://dogarthritistest.co.uk"]
 }
 
 resource "auth0_client_grant" "webapp" {
