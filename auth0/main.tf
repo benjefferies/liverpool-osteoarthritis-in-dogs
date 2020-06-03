@@ -13,7 +13,7 @@ terraform {
 
 resource "auth0_tenant" "tenant" {
   friendly_name    = "Liverpool Osteoarthritis In Dogs"
-  session_lifetime = 46000
+  session_lifetime = 720
   sandbox_version  = "8"
 }
 
