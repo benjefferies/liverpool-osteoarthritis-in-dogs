@@ -1,5 +1,5 @@
 provider "auth0" {
-  domain = "dogarthritistest"
+  domain = "dogarthritistest.eu.auth0.com"
   debug  = true
 }
 
