@@ -1,5 +1,5 @@
 provider "auth0" {
-  domain = "liverpool-osteoarthritis-in-dogs"
+  domain = "dogarthritistest"
   debug = true
 }
 
