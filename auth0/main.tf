@@ -3,6 +3,14 @@ provider "auth0" {
   debug  = true
 }
 
+terraform {
+  backend "s3" {
+    bucket = "dogarthritistest.co.uk-state"
+    key    = "state.tfstate"
+    region = "us-east-1"
+  }
+}
+
 resource "auth0_tenant" "tenant" {
   friendly_name    = "Liverpool Osteoarthritis In Dogs"
   session_lifetime = 46000
