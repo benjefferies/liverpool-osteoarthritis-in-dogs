@@ -48,17 +48,3 @@ resource "auth0_client_grant" "webapp" {
   audience  = auth0_resource_server.resource_server.identifier
   scope     = []
 }
-
-resource "auth0_client" "test" {
-  name        = "test"
-  description = "A client used for testing"
-  app_type    = "non_interactive"
-
-  token_endpoint_auth_method = "client_secret_post"
-}
-
-resource "auth0_client_grant" "test" {
-  client_id = auth0_client.test.id
-  audience  = auth0_resource_server.resource_server.identifier
-  scope     = []
-}
