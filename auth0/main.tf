@@ -32,7 +32,7 @@ resource "auth0_client" "webapp" {
   app_type                   = "spa"
   is_first_party             = true
   token_endpoint_auth_method = "client_secret_post"
-  oidc_conformant            = false
+  oidc_conformant            = true
   callbacks                  = ["http://localhost:3000", "https://dogarthritistest.co.uk/callback"]
   allowed_origins            = ["http://localhost:3000", "https://dogarthritistest.co.uk"]
   grant_types                = ["authorization_code", "http://auth0.com/oauth/grant-type/password-realm", "implicit", "password", "refresh_token"]
