@@ -33,7 +33,7 @@ resource "auth0_client" "webapp" {
   is_first_party             = true
   token_endpoint_auth_method = "client_secret_post"
   oidc_conformant            = false
-  callbacks                  = ["https://localhost:3000/", "https://dogarthritistest.co.uk/callback"]
+  callbacks                  = ["https://localhost:3000/callback", "https://dogarthritistest.co.uk/callback"]
   allowed_origins            = ["https://localhost:3000", "https://dogarthritistest.co.uk"]
   grant_types                = ["authorization_code", "http://auth0.com/oauth/grant-type/password-realm", "implicit", "password", "refresh_token"]
   allowed_logout_urls        = ["https://localhost:3000", "https://dogarthritistest.co.uk"]
